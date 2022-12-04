@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   unset.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fchanane <fchanane@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nel-brig <nel-brig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 05:02:24 by fchanane          #+#    #+#             */
-/*   Updated: 2022/12/03 18:52:04 by fchanane         ###   ########.fr       */
+/*   Updated: 2022/12/04 20:12:26 by nel-brig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void	remove_inside(char *arg)
 			freeit = tmp->next;
 			tmp->next = tmp->next->next;
 			freeit->next = NULL;
+			free(freeit->line);
 			free(freeit);
 			break ;
 		}
@@ -77,6 +78,7 @@ void	remove_var(char *arg)
 		tmp = var->envc;
 		var->envc = var->envc->next;
 		tmp->next = NULL;
+		free(tmp->line);
 		free(tmp);
 	}
 	else
