@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   token.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nel-brig <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nel-brig <nel-brig@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 16:31:34 by nel-brig          #+#    #+#             */
-/*   Updated: 2022/11/25 16:31:36 by nel-brig         ###   ########.fr       */
+/*   Updated: 2022/12/04 20:23:50 by nel-brig         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,9 @@ int	is_whitespaces(char c)
 
 char	*get_env(char *str)
 {
-	int		i;
 	char	*s;
-	t_env	*tmp;	
+	t_env	*tmp;
 
-	i = 0;
 	s = NULL;
 	if (str == NULL)
 		return (NULL);
